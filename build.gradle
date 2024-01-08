@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id("io.spring.dependency-management") version "1.1.4" // read
+    id("org.springframework.boot") version "3.2.1" // read
+}
+
+group = 'com.luciorim'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+//Spring
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.2.1' // read
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.2.1' //Java Persistence Api read
+}
+
+//Other
+dependencies {
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1' //read
+}
+
+//Lombok TODO Read about it
+dependencies {
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+
+}
+
+//Test
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
