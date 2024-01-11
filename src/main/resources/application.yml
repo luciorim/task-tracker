@@ -8,3 +8,6 @@ spring:
     url: jdbc:postgresql://localhost:5432/task-tracker
     username: postgres
     password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
