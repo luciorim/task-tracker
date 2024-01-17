@@ -1,10 +1,6 @@
 package com.luciorim.task_tracker.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.luciorim.task_tracker.store.entities.TaskEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -19,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TaskStateDto {
+
     @NotNull
     Long id;
 
@@ -29,7 +26,13 @@ public class TaskStateDto {
     @JsonProperty("creation_date")
     Instant creationDate = Instant.now();
 
+    @JsonProperty("left_task_state")
+    Long leftTaskStateId;
+
+    @JsonProperty("right_tast_state")
+    Long rightTaskStateId;
+
     @NotNull
-    Long ordinal;
+    List<TaskDto> tasks;
 
 }

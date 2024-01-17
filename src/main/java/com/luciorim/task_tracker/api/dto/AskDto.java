@@ -10,13 +10,10 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class AskDto {
     boolean answer;
-    String message;
 
     public static AskDto createAnswer(boolean answer){
         return AskDto.builder()
                 .answer(answer)
-                .message(
-                        answer ? "Project deleted successfully" : "Project was not deleted ")
                 .build();
     }
 }

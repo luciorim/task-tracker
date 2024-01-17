@@ -13,6 +13,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProjectDto {
+
     @NotNull
     Long id;
 
@@ -26,4 +27,5 @@ public class ProjectDto {
     @NotNull
     @JsonProperty("creation_date")
     Instant creationDate;
+
 }

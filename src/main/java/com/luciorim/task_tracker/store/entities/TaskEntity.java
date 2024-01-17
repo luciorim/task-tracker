@@ -5,7 +5,6 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
-import java.util.List;
 
 @Entity
 @Getter
@@ -20,11 +19,13 @@ public class TaskEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Column(unique = true)
     String name;
 
     @Builder.Default
     Instant creationDate = Instant.now();
+
+    @ManyToOne
+    TaskStateEntity taskState;
 
     String description;
 }

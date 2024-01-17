@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10dc1177-b926-4212-aa4a-9c24da5e2868" name="Changes" comment="initial structure" />
+    <list default="true" id="10dc1177-b926-4212-aa4a-9c24da5e2868" name="Changes" comment="initial structure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/TaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/TaskStateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/util/ControllerHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87/storage_v2/_src_/database/task-tracker.8Jq0nw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87/storage_v2/_src_/database/task-tracker.8Jq0nw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/ProjectDtoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/ProjectDtoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/TaskStateDtoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/TaskStateDtoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/ProjectContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/AskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/AskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/ProjectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/ProjectDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskStateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskStateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskStateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskStateEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskStateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskStateRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -28,6 +52,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Downloads/gradle-8.4/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/3.2.1/230869eb3094a2eb1cb0b077f7990e7f47062f53/spring-data-jpa-3.2.1.jar!/org/springframework/data/jpa/repository/JpaRepository.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -42,10 +69,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build task-tracker-api.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.task-tracker-api.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Application.executor": "Run",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/luciorim/Desktop/springProjects/task-tracker-api",
     "node.js.detected.package.eslint": "true",
@@ -53,10 +87,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.48965517",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "configurable.group.language",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -65,10 +99,31 @@
     ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="task-tracker-api.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.luciorim.task_tracker.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luciorim.task_tracker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="jdk-18.0.2-azul-18.0.2.1-3183f394aec4-46f08da7" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-abbd5a8d" />
       </set>
     </attachedChunks>
   </component>
@@ -82,7 +137,8 @@
       <updated>1704746305719</updated>
       <workItem from="1704746306719" duration="3890000" />
       <workItem from="1704752888734" duration="4521000" />
-      <workItem from="1704757698287" duration="429000" />
+      <workItem from="1704757698287" duration="59394000" />
+      <workItem from="1705433571489" duration="16218000" />
     </task>
     <task id="LOCAL-00001" summary="initial structure">
       <option name="closed" value="true" />
@@ -100,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704756967288</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial structure">
+      <option name="closed" value="true" />
+      <created>1704758136151</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704758136151</updated>
+    </task>
+    <task id="LOCAL-00004" summary="initial structure">
+      <option name="closed" value="true" />
+      <created>1704758281426</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704758281426</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +183,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feat-project-crud" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -123,5 +207,9 @@
     </ignored-roots>
     <MESSAGE value="initial structure" />
     <option name="LAST_COMMIT_MESSAGE" value="initial structure" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
