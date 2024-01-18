@@ -1,6 +1,6 @@
 
 server:
-  port: 8080
+  port: 3030
 
 spring:
   datasource:
@@ -11,3 +11,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60000 #1 minute
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379

@@ -12,13 +12,14 @@ import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.scheduling.config.Task;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RestController
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -39,6 +40,7 @@ public class TaskController {
 
     //TODO add description to create and update
 
+    @Cacheable(value = "tasks", key = "{#task_state_id, #prefix_name.orElse('')}")
     @GetMapping(FETCH_TASK)
     public List<TaskDto> getTasks(
             @PathVariable(value = "task_state_id") Long task_state_id,
@@ -66,6 +68,8 @@ public class TaskController {
 
     }
 
+
+    @CachePut(value = "tasks", key = "{#task_tate_id, #task_name}")
     @PostMapping(CREATE_TASK)
     public TaskDto createTask(
             @PathVariable(value = "task_state_id") Long task_tate_id,
@@ -89,6 +93,7 @@ public class TaskController {
         return taskDtoFactory.createTaskDto(savedTaskEntity);
     }
 
+    @CacheEvict(value = "tasks", key = "{#taskId}")
     @DeleteMapping(DELETE_TASK)
     public AskDto deleteTask(@PathVariable(value = "task_id") Long taskId){
 
@@ -98,6 +103,7 @@ public class TaskController {
 
         return AskDto.builder().answer(true).build();
     }
+
 
     @PatchMapping(UPDATE_TASK)
     public TaskDto updateTask(

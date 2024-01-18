@@ -12,6 +12,9 @@ import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,7 +39,7 @@ public class TaskStateController {
     public static final String DELETE_TASK_STATE = "/api/task-states/{task_state_id}";
 
 //    public static final String CHANGE_TASK_STATE_POSITION = ""; // will be added later
-
+    @Cacheable(value = "taskStates", key = "#project_id")
     @GetMapping(FETCH_TASKS_STATES)
     public List<TaskStateDto> getTaskStates(@PathVariable(value = "project_id") Long project_id){
 
@@ -49,6 +52,8 @@ public class TaskStateController {
                 .collect(Collectors.toList());
     }
 
+
+    @CachePut(value = "taskStates", key = "#project_id")
     @PostMapping(CREATE_TASK_STATE)
     public TaskStateDto createTaskState(
             @PathVariable(value = "project_id") Long project_id,
@@ -94,6 +99,8 @@ public class TaskStateController {
         return taskStateDtoFactory.createTaskStateDto(savedTaskState);
     }
 
+
+    @CachePut(value = "taskStates", key = "#task_state_id")
     @PatchMapping(UPDATE_TASK_STATE)
     public TaskStateDto updateTaskState(
             @PathVariable(value = "task_state_id") Long task_state_id,
@@ -122,6 +129,7 @@ public class TaskStateController {
         return taskStateDtoFactory.createTaskStateDto(taskState);
 
     }
+
 
     @DeleteMapping(DELETE_TASK_STATE)
     public AskDto deleteTaskState(@PathVariable(value = "task_state_id") Long taskStateId){
