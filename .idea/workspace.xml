@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10dc1177-b926-4212-aa4a-9c24da5e2868" name="Changes" comment="initial structure">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/TaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/TaskStateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/util/ControllerHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87/storage_v2/_src_/database/task-tracker.8Jq0nw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1d5aa728-227a-41b2-a6dd-0c07b8bbed87/storage_v2/_src_/database/task-tracker.8Jq0nw/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/Config/RedisCacheConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/ProjectDtoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/ProjectDtoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/TaskStateDtoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/Factories/TaskStateDtoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/ProjectContoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/controllers/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/AskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/AskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/ProjectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/ProjectDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskStateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/api/dto/TaskStateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskStateEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/entities/TaskStateEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskStateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/store/repositories/TaskStateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luciorim/task_tracker/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +122,7 @@
       <workItem from="1704746306719" duration="3890000" />
       <workItem from="1704752888734" duration="4521000" />
       <workItem from="1704757698287" duration="59394000" />
-      <workItem from="1705433571489" duration="16218000" />
+      <workItem from="1705433571489" duration="21356000" />
     </task>
     <task id="LOCAL-00001" summary="initial structure">
       <option name="closed" value="true" />

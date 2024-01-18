@@ -13,8 +13,10 @@ repositories {
 
 //Spring
 dependencies {
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.2.1' // read
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.2.1' //Java Persistence Api read
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '3.2.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.2.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-cache', version: '3.2.1' // work with cache
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '3.2.1' //redis
 }
 
 //Other
@@ -22,7 +24,7 @@ dependencies {
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1' //read
 }
 
-//Lombok TODO Read about it
+//Lombok
 dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
     testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'

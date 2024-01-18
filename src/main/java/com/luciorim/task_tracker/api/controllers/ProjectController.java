@@ -11,6 +11,9 @@ import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -41,7 +44,7 @@ public class ProjectController {
     public static final String FETCH_PROJECT = "/api/projects";
     public static final String DELETE_PROJECT = "/apo/projects/{project_id}";
 
-
+    @Cacheable(value = "projects", key = "{#prefixName.orElse('')}")
     @GetMapping(FETCH_PROJECT)
     public List<ProjectDto> fetchProjects(
             @RequestParam(value = "prefix_name", required = false) Optional<String> prefixName) {
@@ -59,6 +62,7 @@ public class ProjectController {
 
     }
 
+    @CachePut(value = "projects", key = "{#project_id.orElse(''), #project_name.orElse('')}")
     @PostMapping(CREATE_OR_UPDATE_PROJECT)
     public ProjectDto createOrUpdaterProject(
             @RequestParam(value = "project_id", required = false) Optional<Long> project_id,
@@ -145,8 +149,8 @@ public class ProjectController {
     }
 
     @DeleteMapping(DELETE_PROJECT)
-    public AskDto deleteProject(@RequestParam Long id) {
-        ProjectEntity project = controllerHelper.getProjectOrThrowException(id);
+    public AskDto deleteProject(@RequestParam Long project_id) {
+        ProjectEntity project = controllerHelper.getProjectOrThrowException(project_id);
 
         projectRepository.delete(project);
 

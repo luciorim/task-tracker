@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 @Data
@@ -12,7 +13,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class TaskDto {
+public class TaskDto implements Serializable {
 
     @NotNull
     Long id;
