@@ -23,9 +23,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true) //here we make all fields final and private
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @Transactional
-@RequiredArgsConstructor // automatically creates constructor for final fields
+@RequiredArgsConstructor
 public class ProjectController {
 
     ProjectRepository projectRepository;
@@ -34,11 +34,6 @@ public class ProjectController {
 
     ControllerHelper controllerHelper;
 
-    //Optional
-    public static final String CREATE_PROJECT = "/api/projects/{project_id}";
-    public static final String EDIT_PROJECT = "/api/projects/{project_id}";
-
-    //Main
     public static final String CREATE_OR_UPDATE_PROJECT = "/api/projects";
     public static final String FETCH_PROJECT = "/api/projects";
     public static final String DELETE_PROJECT = "/apo/projects/{project_id}";
@@ -69,13 +64,13 @@ public class ProjectController {
 
         project_name = project_name.filter(anotherName -> !anotherName.trim().isEmpty());
 
-        boolean needCreate = !project_id.isPresent();
+        boolean needCreate = project_id.isEmpty();
 
         ProjectEntity projectEntity = project_id
                 .map(controllerHelper::getProjectOrThrowException)
                 .orElseGet(() -> ProjectEntity.builder().build());
 
-        if(needCreate && !project_name.isPresent()){
+        if(needCreate && project_name.isEmpty()){
             throw new BadRequestException("Project name can't be empty");
         }
 
@@ -85,7 +80,7 @@ public class ProjectController {
                             .findByName(anotherName)
                             .filter(tempProj -> !Objects.equals(tempProj.getId(), projectEntity.getId()))
                             .ifPresent(anotherProj -> {
-                                new BadRequestException(String.format("Project with name \"%s\" already exists", anotherName));
+                                throw new BadRequestException(String.format("Project with name \"%s\" already exists", anotherName));
                             });
 
                     projectEntity.setName(anotherName);
@@ -98,57 +93,9 @@ public class ProjectController {
 
     }
 
-    //Do not need, when we have CREATE_OR_UPDATE_PROJECT endpoint
-    @PostMapping(CREATE_PROJECT)
-    public ProjectDto createProject(@RequestParam String name){
-
-        if(name.trim().isEmpty()){
-            throw new BadRequestException("Name can't be empty");
-        }
-
-        projectRepository
-                .findByName(name)
-                .ifPresent(project -> {
-                    throw new BadRequestException(String.format("Project with name \"%s\" already exists", name));
-                });
-
-        ProjectEntity projectEntity = projectRepository.saveAndFlush(
-                ProjectEntity.builder()
-                        .name(name).build()
-        );
-
-        return projectDtoFactory.createProjectDto(projectEntity);
-    }
-
-    //Do not need, when we have CREATE_OR_UPDATE_PROJECT endpoint
-    @PatchMapping(EDIT_PROJECT)
-    public ProjectDto editProject(
-            @PathVariable("project_id") Long project_id,
-            @RequestParam String name){
-        //Check if there is no name in param.
-        if(name.trim().isEmpty()){
-            throw new BadRequestException("Name can't be empty");
-        }
-        //Check for project exists in database
-        ProjectEntity project = controllerHelper.getProjectOrThrowException(project_id);
-
-        //Check that we can assign new name to project
-        projectRepository
-                .findByName(name)
-                .filter(anotherProj -> !Objects.equals(anotherProj.getId(), project_id))
-                .ifPresent(anotherProj -> {
-                    new BadRequestException(String.format("Project with name \"%s\" already exists", name));
-                });
-
-        project.setName(name);
-
-        project = projectRepository.saveAndFlush(project);
-
-        return projectDtoFactory.createProjectDto(project);
-    }
 
     @DeleteMapping(DELETE_PROJECT)
-    public AskDto deleteProject(@RequestParam Long project_id) {
+    public AskDto deleteProject(@PathVariable Long project_id) {
         ProjectEntity project = controllerHelper.getProjectOrThrowException(project_id);
 
         projectRepository.delete(project);
