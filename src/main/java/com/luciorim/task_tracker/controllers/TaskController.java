@@ -1,13 +1,13 @@
-package com.luciorim.task_tracker.api.controllers;
+package com.luciorim.task_tracker.controllers;
 
-import com.luciorim.task_tracker.api.Exceptions.BadRequestException;
-import com.luciorim.task_tracker.api.Factories.TaskDtoFactory;
-import com.luciorim.task_tracker.api.dto.AskDto;
-import com.luciorim.task_tracker.api.dto.TaskDto;
-import com.luciorim.task_tracker.api.util.ControllerHelper;
-import com.luciorim.task_tracker.store.entities.TaskEntity;
-import com.luciorim.task_tracker.store.entities.TaskStateEntity;
-import com.luciorim.task_tracker.store.repositories.TaskRepository;
+import com.luciorim.task_tracker.Exceptions.BadRequestException;
+import com.luciorim.task_tracker.Factories.TaskDtoFactory;
+import com.luciorim.task_tracker.dto.AskDto;
+import com.luciorim.task_tracker.dto.TaskDto;
+import com.luciorim.task_tracker.util.ControllerHelper;
+import com.luciorim.task_tracker.entities.TaskEntity;
+import com.luciorim.task_tracker.entities.TaskStateEntity;
+import com.luciorim.task_tracker.repositories.TaskRepository;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

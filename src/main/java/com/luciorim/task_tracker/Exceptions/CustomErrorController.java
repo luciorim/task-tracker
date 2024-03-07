@@ -1,4 +1,4 @@
-package com.luciorim.task_tracker.api.Exceptions;
+package com.luciorim.task_tracker.Exceptions;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

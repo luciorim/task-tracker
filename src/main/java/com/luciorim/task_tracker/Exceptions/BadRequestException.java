@@ -1,6 +1,5 @@
-package com.luciorim.task_tracker.api.Exceptions;
+package com.luciorim.task_tracker.Exceptions;
 
-import org.apache.logging.log4j.message.Message;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

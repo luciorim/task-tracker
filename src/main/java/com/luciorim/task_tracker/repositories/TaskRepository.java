@@ -1,7 +1,6 @@
-package com.luciorim.task_tracker.store.repositories;
+package com.luciorim.task_tracker.repositories;
 
-import com.luciorim.task_tracker.store.entities.ProjectEntity;
-import com.luciorim.task_tracker.store.entities.TaskEntity;
+import com.luciorim.task_tracker.entities.TaskEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

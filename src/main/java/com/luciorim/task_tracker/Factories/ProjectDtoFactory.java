@@ -1,7 +1,7 @@
-package com.luciorim.task_tracker.api.Factories;
+package com.luciorim.task_tracker.Factories;
 
-import com.luciorim.task_tracker.api.dto.ProjectDto;
-import com.luciorim.task_tracker.store.entities.ProjectEntity;
+import com.luciorim.task_tracker.dto.ProjectDto;
+import com.luciorim.task_tracker.entities.ProjectEntity;
 import org.springframework.stereotype.Component;
 
 @Component

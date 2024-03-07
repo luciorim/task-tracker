@@ -1,4 +1,4 @@
-package com.luciorim.task_tracker.api.dto;
+package com.luciorim.task_tracker.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

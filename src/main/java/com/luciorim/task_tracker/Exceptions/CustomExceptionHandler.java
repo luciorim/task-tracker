@@ -1,4 +1,4 @@
-package com.luciorim.task_tracker.api.Exceptions;
+package com.luciorim.task_tracker.Exceptions;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;

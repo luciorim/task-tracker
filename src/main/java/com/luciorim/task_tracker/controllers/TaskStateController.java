@@ -1,18 +1,17 @@
-package com.luciorim.task_tracker.api.controllers;
+package com.luciorim.task_tracker.controllers;
 
-import com.luciorim.task_tracker.api.Exceptions.BadRequestException;
-import com.luciorim.task_tracker.api.Factories.TaskStateDtoFactory;
-import com.luciorim.task_tracker.api.dto.AskDto;
-import com.luciorim.task_tracker.api.dto.TaskStateDto;
-import com.luciorim.task_tracker.api.util.ControllerHelper;
-import com.luciorim.task_tracker.store.entities.ProjectEntity;
-import com.luciorim.task_tracker.store.entities.TaskStateEntity;
-import com.luciorim.task_tracker.store.repositories.TaskStateRepository;
+import com.luciorim.task_tracker.Exceptions.BadRequestException;
+import com.luciorim.task_tracker.Factories.TaskStateDtoFactory;
+import com.luciorim.task_tracker.dto.AskDto;
+import com.luciorim.task_tracker.dto.TaskStateDto;
+import com.luciorim.task_tracker.util.ControllerHelper;
+import com.luciorim.task_tracker.entities.ProjectEntity;
+import com.luciorim.task_tracker.entities.TaskStateEntity;
+import com.luciorim.task_tracker.repositories.TaskStateRepository;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;

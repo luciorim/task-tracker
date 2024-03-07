@@ -1,12 +1,12 @@
-package com.luciorim.task_tracker.api.util;
+package com.luciorim.task_tracker.util;
 
-import com.luciorim.task_tracker.api.Exceptions.NotFoundException;
-import com.luciorim.task_tracker.store.entities.ProjectEntity;
-import com.luciorim.task_tracker.store.entities.TaskEntity;
-import com.luciorim.task_tracker.store.entities.TaskStateEntity;
-import com.luciorim.task_tracker.store.repositories.ProjectRepository;
-import com.luciorim.task_tracker.store.repositories.TaskRepository;
-import com.luciorim.task_tracker.store.repositories.TaskStateRepository;
+import com.luciorim.task_tracker.Exceptions.NotFoundException;
+import com.luciorim.task_tracker.entities.ProjectEntity;
+import com.luciorim.task_tracker.entities.TaskEntity;
+import com.luciorim.task_tracker.entities.TaskStateEntity;
+import com.luciorim.task_tracker.repositories.ProjectRepository;
+import com.luciorim.task_tracker.repositories.TaskRepository;
+import com.luciorim.task_tracker.repositories.TaskStateRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

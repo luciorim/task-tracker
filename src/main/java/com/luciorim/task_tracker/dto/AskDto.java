@@ -1,9 +1,7 @@
-package com.luciorim.task_tracker.api.dto;
+package com.luciorim.task_tracker.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.io.Serializable;
 
 @Data
 @Builder

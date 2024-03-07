@@ -1,4 +1,4 @@
-package com.luciorim.task_tracker.store.entities;
+package com.luciorim.task_tracker.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

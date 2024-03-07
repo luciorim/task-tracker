@@ -1,4 +1,4 @@
-package com.luciorim.task_tracker.api.Exceptions;
+package com.luciorim.task_tracker.Exceptions;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
